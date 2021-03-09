@@ -1,0 +1,55 @@
+{
+  "name": "web-weather",
+  "version": "0.0.1",
+  "description": "Practice repository",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "babel src -d dist",
+    "dev": "npx nodemon server.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "setupFiles": [
+      "./tests/helpers/setup.js"
+    ],
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
+  "keywords": [],
+  "author": "Dan J. Hamilton",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "commander": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-hot-loader": "^4.13.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/node": "^7.13.0",
+    "@babel/preset-env": "^7.13.9",
+    "@babel/preset-react": "^7.12.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.1.1",
+    "jest": "^26.6.3",
+    "nock": "^11.9.1",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.17",
+    "webpack": "^5.24.3",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
