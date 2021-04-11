@@ -4,13 +4,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: './src/index1.js',
   devServer: {
-    // contentBase: './dist',
-    contentBase: path.join(__dirname, 'public/'),
-    port: 3000,
-    publicPath: 'http://localhost:3000/public/',
-    hotOnly: true
+  //  contentBase: './public',
+    contentBase: path.join(__dirname, 'public'),
+    port: 3001,
+  //  hotOnly: true
   },
   devtool: 'inline-source-map',
   module: {
@@ -35,8 +34,8 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public'),
     clean: true,
-    //publicPath: '/'
-    //publicPath: '/dist/'
+    publicPath: '/'
+    // publicPath: '/dist/'
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -45,4 +44,5 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
   ],
   resolve: { extensions: ['*', '.js', '.jsx'] }, //, '.ts', '.tsx'] },
+//  plugins: [new webpack.HotModuleReplacementPlugin()]
 };
