@@ -1,5 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Forecast from './Forecast';
+import ForecastContainer from './components/ForecastContainer';
+import { hot } from 'react-hot-loader';
 
-ReactDOM.render(<Forecast />, document.getElementById('root'));
+const App = hot(module)(
+  () => {
+    return (
+      <div>
+        <ForecastContainer />
+      </div>
+    )
+  }
+)
+
+ReactDOM.render(<App />, document.getElementById('root'));
